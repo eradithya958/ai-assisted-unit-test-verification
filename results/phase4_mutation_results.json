@@ -1,0 +1,2048 @@
+{
+  "phase": "Phase 4: Mutation Testing Benchmark",
+  "timestamp": "2026-10-02T16:21:59Z",
+  "summary": {
+    "total_mutants": 241,
+    "manual_killed": 179,
+    "manual_survived": 62,
+    "manual_mutation_score_pct": 74.27,
+    "ai_killed": 59,
+    "ai_survived": 182,
+    "ai_mutation_score_pct": 24.48,
+    "categories": {
+      "Constant Replacement": {
+        "total": 12,
+        "manual_killed": 7,
+        "ai_killed": 3,
+        "manual_score_pct": 58.33,
+        "ai_score_pct": 25.0
+      },
+      "Relational Operator Replacement": {
+        "total": 71,
+        "manual_killed": 54,
+        "ai_killed": 23,
+        "manual_score_pct": 76.06,
+        "ai_score_pct": 32.39
+      },
+      "Boundary Shift": {
+        "total": 75,
+        "manual_killed": 55,
+        "ai_killed": 20,
+        "manual_score_pct": 73.33,
+        "ai_score_pct": 26.67
+      },
+      "Logical Connector / Membership": {
+        "total": 12,
+        "manual_killed": 12,
+        "ai_killed": 7,
+        "manual_score_pct": 100.0,
+        "ai_score_pct": 58.33
+      },
+      "Arithmetic Operator Replacement": {
+        "total": 40,
+        "manual_killed": 25,
+        "ai_killed": 5,
+        "manual_score_pct": 62.5,
+        "ai_score_pct": 12.5
+      },
+      "Conditional Operator Replacement": {
+        "total": 31,
+        "manual_killed": 26,
+        "ai_killed": 1,
+        "manual_score_pct": 83.87,
+        "ai_score_pct": 3.23
+      }
+    },
+    "total_execution_time_sec": 46.36
+  },
+  "modules": {
+    "validator.py": {
+      "source_file": "src/quality_assessment/validator.py",
+      "total_mutants": 41,
+      "manual_killed": 34,
+      "manual_survived": 7,
+      "manual_score_pct": 82.93,
+      "ai_killed": 9,
+      "ai_survived": 32,
+      "ai_score_pct": 21.95,
+      "mutants_detail": [
+        {
+          "id": 1,
+          "line": 41,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 41",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 2,
+          "line": 74,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 74",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 3,
+          "line": 74,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 74",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 4,
+          "line": 82,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 5,
+          "line": 87,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 87",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 6,
+          "line": 94,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 94",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 7,
+          "line": 96,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 96",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 8,
+          "line": 98,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 98",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 9,
+          "line": 98,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 98",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 10,
+          "line": 103,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 103",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 11,
+          "line": 105,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 105",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 12,
+          "line": 108,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 108",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 13,
+          "line": 108,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 108",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 14,
+          "line": 108,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 108",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 15,
+          "line": 108,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 108",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 16,
+          "line": 108,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 108",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 17,
+          "line": 113,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 113",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 18,
+          "line": 115,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 115",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 19,
+          "line": 118,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 118",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 20,
+          "line": 118,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 118",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 21,
+          "line": 123,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 123",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 22,
+          "line": 125,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 23,
+          "line": 127,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 24,
+          "line": 127,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 25,
+          "line": 134,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 134",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 26,
+          "line": 144,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 144",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 27,
+          "line": 145,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 145",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 28,
+          "line": 167,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 167",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 29,
+          "line": 171,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 171",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 30,
+          "line": 174,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 174",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 31,
+          "line": 177,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'and' with 'or' at line 177",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 32,
+          "line": 177,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 177",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 33,
+          "line": 185,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 185",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 34,
+          "line": 186,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 186",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 35,
+          "line": 188,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 188",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 36,
+          "line": 189,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 189",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 37,
+          "line": 194,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 194",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 38,
+          "line": 195,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 195",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 39,
+          "line": 197,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>=' to '>' at line 197",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 40,
+          "line": 198,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 198",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 41,
+          "line": 200,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 200",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        }
+      ]
+    },
+    "metrics.py": {
+      "source_file": "src/quality_assessment/metrics.py",
+      "total_mutants": 76,
+      "manual_killed": 68,
+      "manual_survived": 8,
+      "manual_score_pct": 89.47,
+      "ai_killed": 33,
+      "ai_survived": 43,
+      "ai_score_pct": 43.42,
+      "mutants_detail": [
+        {
+          "id": 1,
+          "line": 19,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 19",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 2,
+          "line": 52,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 52",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 3,
+          "line": 54,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 54",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 4,
+          "line": 54,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 54",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 5,
+          "line": 57,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 57",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 6,
+          "line": 59,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 7,
+          "line": 59,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 8,
+          "line": 59,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 9,
+          "line": 59,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 10,
+          "line": 65,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '+' to '-' at line 65",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 11,
+          "line": 66,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 66",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 12,
+          "line": 66,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 66",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 13,
+          "line": 66,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 66",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 14,
+          "line": 69,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '+' to '-' at line 69",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 15,
+          "line": 70,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 70",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 16,
+          "line": 70,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 70",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 17,
+          "line": 70,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 70",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 18,
+          "line": 73,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '+' to '-' at line 73",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 19,
+          "line": 74,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 74",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 20,
+          "line": 74,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 74",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 21,
+          "line": 75,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 75",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 22,
+          "line": 75,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 75",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 23,
+          "line": 75,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 75",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 24,
+          "line": 110,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 110",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 25,
+          "line": 113,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 113",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 26,
+          "line": 113,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 113",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 27,
+          "line": 116,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '!=' to '==' at line 116",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 28,
+          "line": 122,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 122",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 29,
+          "line": 125,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 30,
+          "line": 127,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 31,
+          "line": 127,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 32,
+          "line": 127,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 33,
+          "line": 127,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 34,
+          "line": 127,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 127",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 35,
+          "line": 130,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 130",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 36,
+          "line": 132,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 132",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 37,
+          "line": 132,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 132",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 38,
+          "line": 132,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 132",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 39,
+          "line": 135,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 135",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 40,
+          "line": 137,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 137",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 41,
+          "line": 159,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 159",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 42,
+          "line": 161,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 161",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 43,
+          "line": 164,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 164",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 44,
+          "line": 164,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 164",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 45,
+          "line": 166,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 166",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 46,
+          "line": 166,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 166",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 47,
+          "line": 169,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 169",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 48,
+          "line": 169,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 169",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 49,
+          "line": 169,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 169",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 50,
+          "line": 193,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 193",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 51,
+          "line": 193,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 193",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 52,
+          "line": 201,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 201",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 53,
+          "line": 203,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 203",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 54,
+          "line": 203,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 203",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 55,
+          "line": 209,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 209",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 56,
+          "line": 209,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 209",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 57,
+          "line": 210,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 210",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 58,
+          "line": 210,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 210",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 59,
+          "line": 210,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 210",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 60,
+          "line": 236,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 236",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 61,
+          "line": 236,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 236",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 62,
+          "line": 239,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 239",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 63,
+          "line": 241,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 241",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 64,
+          "line": 243,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 243",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 65,
+          "line": 243,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 243",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 66,
+          "line": 243,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 243",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 67,
+          "line": 243,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 243",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 68,
+          "line": 243,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 243",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 69,
+          "line": 247,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 247",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 70,
+          "line": 247,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 247",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 71,
+          "line": 247,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 247",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 72,
+          "line": 250,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 250",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 73,
+          "line": 252,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 252",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 74,
+          "line": 252,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 252",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 75,
+          "line": 253,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 253",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 76,
+          "line": 255,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 255",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        }
+      ]
+    },
+    "risk_scorer.py": {
+      "source_file": "src/quality_assessment/risk_scorer.py",
+      "total_mutants": 70,
+      "manual_killed": 35,
+      "manual_survived": 35,
+      "manual_score_pct": 50.0,
+      "ai_killed": 3,
+      "ai_survived": 67,
+      "ai_score_pct": 4.29,
+      "mutants_detail": [
+        {
+          "id": 1,
+          "line": 48,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '!=' to '==' at line 48",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 2,
+          "line": 51,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 51",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 3,
+          "line": 53,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 53",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 4,
+          "line": 55,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 55",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 5,
+          "line": 55,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 55",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 6,
+          "line": 59,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 59",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 7,
+          "line": 59,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 8,
+          "line": 59,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 59",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 9,
+          "line": 79,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 79",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 10,
+          "line": 82,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 11,
+          "line": 82,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 12,
+          "line": 82,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 13,
+          "line": 82,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 14,
+          "line": 82,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 82",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 15,
+          "line": 84,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 84",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 16,
+          "line": 84,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 84",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 17,
+          "line": 103,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 103",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 18,
+          "line": 106,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 106",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 19,
+          "line": 106,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 106",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 20,
+          "line": 109,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 109",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 21,
+          "line": 109,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '10.0' to '11.0' at line 109",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 22,
+          "line": 111,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 111",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 23,
+          "line": 111,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 111",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 24,
+          "line": 111,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 111",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 25,
+          "line": 111,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 111",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 26,
+          "line": 112,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 112",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 27,
+          "line": 112,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '25.0' to '26.0' at line 112",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 28,
+          "line": 114,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '+' to '-' at line 114",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 29,
+          "line": 114,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 114",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 30,
+          "line": 114,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 114",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 31,
+          "line": 114,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '10.0' to '11.0' at line 114",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 32,
+          "line": 114,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 114",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 33,
+          "line": 117,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '+' to '-' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 34,
+          "line": 117,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 35,
+          "line": 117,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 36,
+          "line": 117,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 37,
+          "line": 117,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 38,
+          "line": 117,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '-' to '+' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 39,
+          "line": 117,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '25.0' to '26.0' at line 117",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 40,
+          "line": 119,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 119",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 41,
+          "line": 119,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 119",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 42,
+          "line": 154,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 154",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 43,
+          "line": 154,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 154",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 44,
+          "line": 154,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 154",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 45,
+          "line": 156,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 156",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 46,
+          "line": 156,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 156",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 47,
+          "line": 156,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 156",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 48,
+          "line": 158,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 158",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 49,
+          "line": 158,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 158",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 50,
+          "line": 158,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 158",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 51,
+          "line": 165,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1.0' to '2.0' at line 165",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 52,
+          "line": 165,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 165",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 53,
+          "line": 166,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 166",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 54,
+          "line": 166,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 166",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 55,
+          "line": 169,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 169",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 56,
+          "line": 169,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '/' to '*' at line 169",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 57,
+          "line": 169,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 169",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 58,
+          "line": 170,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 170",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 59,
+          "line": 170,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 170",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 60,
+          "line": 170,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '10.0' to '11.0' at line 170",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 61,
+          "line": 173,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 173",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 62,
+          "line": 174,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 174",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 63,
+          "line": 175,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 175",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 64,
+          "line": 176,
+          "category": "Arithmetic Operator Replacement",
+          "description": "Changed arithmetic '*' to '/' at line 176",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 65,
+          "line": 178,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 178",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 66,
+          "line": 178,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 178",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 67,
+          "line": 180,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 180",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 68,
+          "line": 180,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '25.0' to '26.0' at line 180",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 69,
+          "line": 182,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 182",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 70,
+          "line": 184,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 184",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        }
+      ]
+    },
+    "gate_tracker.py": {
+      "source_file": "src/quality_assessment/gate_tracker.py",
+      "total_mutants": 26,
+      "manual_killed": 16,
+      "manual_survived": 10,
+      "manual_score_pct": 61.54,
+      "ai_killed": 2,
+      "ai_survived": 24,
+      "ai_score_pct": 7.69,
+      "mutants_detail": [
+        {
+          "id": 1,
+          "line": 51,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '30.0' to '31.0' at line 51",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 2,
+          "line": 52,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '70.0' to '71.0' at line 52",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 3,
+          "line": 66,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>=' to '>' at line 66",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 4,
+          "line": 70,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 70",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 5,
+          "line": 70,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 70",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 6,
+          "line": 79,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 79",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 7,
+          "line": 123,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 123",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 8,
+          "line": 125,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 9,
+          "line": 125,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 10,
+          "line": 125,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 11,
+          "line": 125,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 125",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 12,
+          "line": 125,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 125",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 13,
+          "line": 130,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 130",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 14,
+          "line": 135,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>=' to '>' at line 135",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 15,
+          "line": 136,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 136",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 16,
+          "line": 138,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 138",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 17,
+          "line": 139,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 139",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 18,
+          "line": 143,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 143",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 19,
+          "line": 144,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 144",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 20,
+          "line": 145,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>=' to '>' at line 145",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 21,
+          "line": 152,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 152",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 22,
+          "line": 165,
+          "category": "Conditional Operator Replacement",
+          "description": "Replaced boolean 'or' with 'and' at line 165",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 23,
+          "line": 168,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '100.0' to '101.0' at line 168",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 24,
+          "line": 176,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 176",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 25,
+          "line": 177,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0.0' to '1.0' at line 177",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 26,
+          "line": 182,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 182",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        }
+      ]
+    },
+    "rule_engine.py": {
+      "source_file": "src/quality_assessment/rule_engine.py",
+      "total_mutants": 28,
+      "manual_killed": 26,
+      "manual_survived": 2,
+      "manual_score_pct": 92.86,
+      "ai_killed": 12,
+      "ai_survived": 16,
+      "ai_score_pct": 42.86,
+      "mutants_detail": [
+        {
+          "id": 1,
+          "line": 52,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 52",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 2,
+          "line": 74,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 74",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 3,
+          "line": 77,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'False' to 'True' at line 77",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 4,
+          "line": 84,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 84",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 5,
+          "line": 85,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 85",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 6,
+          "line": 86,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 86",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 7,
+          "line": 87,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '!=' to '==' at line 87",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 8,
+          "line": 88,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 88",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 9,
+          "line": 89,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>' to '>=' at line 89",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 10,
+          "line": 90,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 90",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 11,
+          "line": 91,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '>=' to '>' at line 91",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 12,
+          "line": 92,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 92",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 13,
+          "line": 93,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<' to '<=' at line 93",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 14,
+          "line": 94,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 94",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 15,
+          "line": 95,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '<=' to '<' at line 95",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 16,
+          "line": 96,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 96",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 17,
+          "line": 99,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'in' to 'not in' at line 99",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 18,
+          "line": 100,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 100",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 19,
+          "line": 103,
+          "category": "Logical Connector / Membership",
+          "description": "Changed 'not in' to 'in' at line 103",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 20,
+          "line": 115,
+          "category": "Constant Replacement",
+          "description": "Swapped boolean constant 'True' to 'False' at line 115",
+          "manual_status": "SURVIVED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 21,
+          "line": 134,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 134",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 22,
+          "line": 134,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 134",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 23,
+          "line": 155,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 155",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 24,
+          "line": 156,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '!=' to '==' at line 156",
+          "manual_status": "KILLED",
+          "ai_status": "KILLED"
+        },
+        {
+          "id": 25,
+          "line": 156,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '1' to '2' at line 156",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 26,
+          "line": 158,
+          "category": "Boundary Shift",
+          "description": "Shifted constant '0' to '1' at line 158",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 27,
+          "line": 165,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 165",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        },
+        {
+          "id": 28,
+          "line": 167,
+          "category": "Relational Operator Replacement",
+          "description": "Changed '==' to '!=' at line 167",
+          "manual_status": "KILLED",
+          "ai_status": "SURVIVED"
+        }
+      ]
+    }
+  }
+}

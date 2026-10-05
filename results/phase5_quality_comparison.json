@@ -1,0 +1,160 @@
+{
+  "phase": "Phase 5: Test Suite Quality Comparison",
+  "timestamp": "2026-10-02T16:25:49Z",
+  "metrics_comparison": {
+    "manual_suite": {
+      "total_test_functions": 122,
+      "total_assert_statements": 131,
+      "total_pytest_raises": 73,
+      "total_verification_points": 204,
+      "total_lines_of_code": 1144,
+      "assertions_per_test": 1.67,
+      "lines_per_test": 9.38,
+      "files": {
+        "test_gate_tracker.py": {
+          "test_functions": 12,
+          "assert_statements": 39,
+          "pytest_raises": 8,
+          "total_verification_points": 47,
+          "lines_of_code": 168,
+          "assertions_per_test": 3.92
+        },
+        "test_metrics.py": {
+          "test_functions": 39,
+          "assert_statements": 27,
+          "pytest_raises": 26,
+          "total_verification_points": 53,
+          "lines_of_code": 268,
+          "assertions_per_test": 1.36
+        },
+        "test_risk_scorer.py": {
+          "test_functions": 26,
+          "assert_statements": 23,
+          "pytest_raises": 10,
+          "total_verification_points": 33,
+          "lines_of_code": 258,
+          "assertions_per_test": 1.27
+        },
+        "test_rule_engine.py": {
+          "test_functions": 20,
+          "assert_statements": 11,
+          "pytest_raises": 13,
+          "total_verification_points": 24,
+          "lines_of_code": 176,
+          "assertions_per_test": 1.2
+        },
+        "test_validator.py": {
+          "test_functions": 25,
+          "assert_statements": 31,
+          "pytest_raises": 16,
+          "total_verification_points": 47,
+          "lines_of_code": 274,
+          "assertions_per_test": 1.88
+        }
+      }
+    },
+    "ai_suite": {
+      "total_test_functions": 33,
+      "total_assert_statements": 41,
+      "total_pytest_raises": 11,
+      "total_verification_points": 52,
+      "total_lines_of_code": 290,
+      "assertions_per_test": 1.58,
+      "lines_per_test": 8.79,
+      "files": {
+        "test_gate_tracker.py": {
+          "test_functions": 6,
+          "assert_statements": 6,
+          "pytest_raises": 0,
+          "total_verification_points": 6,
+          "lines_of_code": 44,
+          "assertions_per_test": 1.0
+        },
+        "test_metrics.py": {
+          "test_functions": 9,
+          "assert_statements": 14,
+          "pytest_raises": 3,
+          "total_verification_points": 17,
+          "lines_of_code": 65,
+          "assertions_per_test": 1.89
+        },
+        "test_risk_scorer.py": {
+          "test_functions": 5,
+          "assert_statements": 10,
+          "pytest_raises": 1,
+          "total_verification_points": 11,
+          "lines_of_code": 49,
+          "assertions_per_test": 2.2
+        },
+        "test_rule_engine.py": {
+          "test_functions": 5,
+          "assert_statements": 6,
+          "pytest_raises": 1,
+          "total_verification_points": 7,
+          "lines_of_code": 48,
+          "assertions_per_test": 1.4
+        },
+        "test_validator.py": {
+          "test_functions": 8,
+          "assert_statements": 5,
+          "pytest_raises": 6,
+          "total_verification_points": 11,
+          "lines_of_code": 84,
+          "assertions_per_test": 1.38
+        }
+      }
+    }
+  },
+  "flakiness_stress_tests": {
+    "manual_suite": {
+      "iterations": 10,
+      "failed_runs": 0,
+      "flakiness_rate_pct": 0.0,
+      "avg_duration_sec": 0.2443,
+      "min_duration_sec": 0.237,
+      "max_duration_sec": 0.287
+    },
+    "ai_suite": {
+      "iterations": 10,
+      "failed_runs": 0,
+      "flakiness_rate_pct": 0.0,
+      "avg_duration_sec": 0.1851,
+      "min_duration_sec": 0.182,
+      "max_duration_sec": 0.19
+    }
+  },
+  "weak_positives_catalogue": [
+    {
+      "module": "metrics.py",
+      "test_function": "TestQualityMetricsCalculatorAI.test_precision_recall_f1_nominal",
+      "ai_code": "assert res[\"precision\"] > 0.0\nassert res[\"recall\"] > 0.0\nassert res[\"f1_score\"] > 0.0",
+      "issue": "Weak Inequality Assertion",
+      "impact": "Passes even if formulas are mutated to return arbitrary positive numbers or multiplication instead of division (e.g. tp * prec_denom = 120 > 0.0).",
+      "remedy": "assert res[\"precision\"] == 0.8333\nassert res[\"recall\"] == 0.7692\nassert res[\"f1_score\"] == 0.8000"
+    },
+    {
+      "module": "metrics.py",
+      "test_function": "TestQualityMetricsCalculatorAI.test_brier_score_nominal",
+      "ai_code": "assert isinstance(score, float)\nassert 0.0 <= score <= 1.0",
+      "issue": "Trivial Type & Range Check",
+      "impact": "Passes on completely incorrect calibration equations as long as the output is a float between 0 and 1.",
+      "remedy": "assert score == 0.040000"
+    },
+    {
+      "module": "risk_scorer.py",
+      "test_function": "TestQualityRiskScorerAI.test_composite_risk_nominal",
+      "ai_code": "assert \"risk_score\" in res\nassert \"tier\" in res\nassert 0.0 <= res[\"risk_score\"] <= 100.0",
+      "issue": "Existence Check without Semantic Validation",
+      "impact": "Survived 95.7% of mutants inside the non-linear S-curve penalty and weight normalizer because no specific score or tier threshold was asserted.",
+      "remedy": "assert res[\"risk_score\"] == 18.25\nassert res[\"tier\"] == RiskTier.LOW.value\nassert res[\"breakdown\"][\"coverage_penalty\"] == 15.0"
+    },
+    {
+      "module": "validator.py",
+      "test_function": "TestDatasetValidatorAI.test_validate_metric_payload_nominal",
+      "ai_code": "assert res is not None\nassert res[\"lines_of_code\"] == 200",
+      "issue": "Partial Key Check",
+      "impact": "Omitted validation of sanitized types and remaining sanitized keys (coverage float coercion, complexity float coercion).",
+      "remedy": "assert res[\"coverage\"] == 88.0 and isinstance(res[\"coverage\"], float)"
+    }
+  ]
+}

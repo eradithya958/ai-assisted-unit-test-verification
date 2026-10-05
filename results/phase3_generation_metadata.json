@@ -1,0 +1,67 @@
+{
+  "phase": "Phase 3: AI-Assisted Test Generation",
+  "timestamp": "2026-10-02T16:20:14Z",
+  "backend": "ReproducibleOfflineLLMClient",
+  "modules": {
+    "validator.py": {
+      "test_file": "tests/ai_generated/test_validator.py",
+      "generation_time_sec": 4.255,
+      "syntax_valid": true,
+      "test_functions": 8,
+      "assert_statements": 5,
+      "lines_of_test_code": 84,
+      "manual_corrections": [
+        "Verified imports: DatasetValidator and custom validation exceptions properly linked."
+      ]
+    },
+    "metrics.py": {
+      "test_file": "tests/ai_generated/test_metrics.py",
+      "generation_time_sec": 4.255,
+      "syntax_valid": true,
+      "test_functions": 9,
+      "assert_statements": 14,
+      "lines_of_test_code": 65,
+      "manual_corrections": [
+        "No syntax repairs needed. Noted weak assertions on precision/recall (> 0.0 instead of exact decimal)."
+      ]
+    },
+    "risk_scorer.py": {
+      "test_file": "tests/ai_generated/test_risk_scorer.py",
+      "generation_time_sec": 4.255,
+      "syntax_valid": true,
+      "test_functions": 5,
+      "assert_statements": 10,
+      "lines_of_test_code": 49,
+      "manual_corrections": [
+        "Fixed import namespace from relative to absolute `quality_assessment.risk_scorer`."
+      ]
+    },
+    "gate_tracker.py": {
+      "test_file": "tests/ai_generated/test_gate_tracker.py",
+      "generation_time_sec": 4.255,
+      "syntax_valid": true,
+      "test_functions": 6,
+      "assert_statements": 6,
+      "lines_of_test_code": 44,
+      "manual_corrections": [
+        "No syntax repairs needed. Noted missing multi-step debounce recovery test scenario."
+      ]
+    },
+    "rule_engine.py": {
+      "test_file": "tests/ai_generated/test_rule_engine.py",
+      "generation_time_sec": 4.255,
+      "syntax_valid": true,
+      "test_functions": 5,
+      "assert_statements": 6,
+      "lines_of_test_code": 48,
+      "manual_corrections": [
+        "Verified enum imports (ComparisonOperator, LogicalOperator) match module definition."
+      ]
+    }
+  },
+  "summary": {
+    "total_modules": 5,
+    "total_generation_time_sec": 21.27,
+    "total_generated_loc": 290
+  }
+}

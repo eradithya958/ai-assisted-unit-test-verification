@@ -1,0 +1,130 @@
+{
+  "phase": "Phase 2: Manual Test Suite Baseline",
+  "timestamp": "2026-10-02T18:18:00Z",
+  "summary": {
+    "total_modules": 5,
+    "total_pytest_executions": 199,
+    "total_test_functions": 122,
+    "total_assert_statements": 131,
+    "total_test_lines_of_code": 1144,
+    "total_engineering_time_minutes": 75,
+    "overall_statement_coverage_pct": 100.0,
+    "overall_branch_coverage_pct": 98.36,
+    "overall_combined_coverage_pct": 99.40
+  },
+  "modules": {
+    "validator.py": {
+      "target_file": "src/quality_assessment/validator.py",
+      "test_file": "tests/manual/test_validator.py",
+      "test_functions": 25,
+      "pytest_executions": 41,
+      "assert_statements": 31,
+      "lines_of_test_code": 274,
+      "time_spent_minutes": 16,
+      "statements": 89,
+      "statement_coverage_pct": 100.0,
+      "branches": 72,
+      "branch_coverage_pct": 94.44,
+      "combined_coverage_pct": 97.52,
+      "test_categories_covered": [
+        "Nominal dictionary validation",
+        "Exact boundary and extreme boundary values",
+        "Type coercions and integer/float normalizations",
+        "Disallowed extra keys rejection",
+        "Missing required fields assertions",
+        "Strict type rejection (booleans, strings, None, collections)",
+        "Numeric bounds inclusive/exclusive and unbounded checks"
+      ]
+    },
+    "metrics.py": {
+      "target_file": "src/quality_assessment/metrics.py",
+      "test_file": "tests/manual/test_metrics.py",
+      "test_functions": 39,
+      "pytest_executions": 55,
+      "assert_statements": 27,
+      "lines_of_test_code": 268,
+      "time_spent_minutes": 17,
+      "statements": 96,
+      "statement_coverage_pct": 100.0,
+      "branches": 66,
+      "branch_coverage_pct": 100.0,
+      "combined_coverage_pct": 100.0,
+      "test_categories_covered": [
+        "Nominal confusion matrix calculations",
+        "Zero-division denominator safety checks",
+        "Custom zero-division value overrides",
+        "Brier calibration score on perfect and worst predictions",
+        "Empty collection safeguards and length mismatch checks",
+        "Cyclomatic density min/max boundary constraints",
+        "Rolling pass rate sliding window calculations",
+        "Shannon entropy discrete distribution calculations"
+      ]
+    },
+    "risk_scorer.py": {
+      "target_file": "src/quality_assessment/risk_scorer.py",
+      "test_file": "tests/manual/test_risk_scorer.py",
+      "test_functions": 26,
+      "pytest_executions": 44,
+      "assert_statements": 23,
+      "lines_of_test_code": 258,
+      "time_spent_minutes": 15,
+      "statements": 70,
+      "statement_coverage_pct": 100.0,
+      "branches": 38,
+      "branch_coverage_pct": 100.0,
+      "combined_coverage_pct": 100.0,
+      "test_categories_covered": [
+        "Constructor default and custom weights validation",
+        "Weights sum-to-1.0 and non-negativity invariants",
+        "Coverage deficit penalty bounds and linear scaling",
+        "Complexity penalty multi-bracket S-curve and saturation",
+        "Composite risk score tier classifications (LOW, MEDIUM, HIGH, CRITICAL)",
+        "Churn ratio capping at 100% and smell density saturation"
+      ]
+    },
+    "gate_tracker.py": {
+      "target_file": "src/quality_assessment/gate_tracker.py",
+      "test_file": "tests/manual/test_gate_tracker.py",
+      "test_functions": 12,
+      "pytest_executions": 22,
+      "assert_statements": 39,
+      "lines_of_test_code": 168,
+      "time_spent_minutes": 14,
+      "statements": 77,
+      "statement_coverage_pct": 100.0,
+      "branches": 22,
+      "branch_coverage_pct": 100.0,
+      "combined_coverage_pct": 100.0,
+      "test_categories_covered": [
+        "Finite state machine valid and illegal transition graphs",
+        "Hysteresis recovery debounce requiring N consecutive passes",
+        "Debounce counter reset on sudden failure spikes",
+        "Emergency BLOCKED manual state lock and evaluation freeze",
+        "Reset to INITIALIZED lifecycle management",
+        "Audit log history recording and timestamp validation"
+      ]
+    },
+    "rule_engine.py": {
+      "target_file": "src/quality_assessment/rule_engine.py",
+      "test_file": "tests/manual/test_rule_engine.py",
+      "test_functions": 20,
+      "pytest_executions": 37,
+      "assert_statements": 11,
+      "lines_of_test_code": 176,
+      "time_spent_minutes": 13,
+      "statements": 87,
+      "statement_coverage_pct": 100.0,
+      "branches": 46,
+      "branch_coverage_pct": 100.0,
+      "combined_coverage_pct": 100.0,
+      "test_categories_covered": [
+        "Relational comparison operators (GT, GTE, LT, LTE, EQ, NEQ)",
+        "Membership operators (IN, NOT_IN) with collection operands",
+        "Strict vs lenient missing payload field policies",
+        "Logical combinators (AND, OR, NOT) with truth table scenarios",
+        "Raw dictionary condition parsing and validation",
+        "Incompatible type comparison exception handling"
+      ]
+    }
+  }
+}

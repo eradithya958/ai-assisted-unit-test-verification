@@ -1,0 +1,128 @@
+{
+  "phase": "Phase 3: AI-Assisted Test Generation Baseline",
+  "timestamp": "2026-10-02T18:20:30Z",
+  "summary": {
+    "total_modules": 5,
+    "total_pytest_executions": 35,
+    "total_test_functions": 33,
+    "total_assert_statements": 41,
+    "total_test_lines_of_code": 290,
+    "total_generation_time_sec": 21.27,
+    "manual_review_and_repair_time_minutes": 8,
+    "overall_statement_coverage_pct": 73.03,
+    "overall_branch_coverage_pct": 51.23,
+    "overall_combined_coverage_pct": 65.01
+  },
+  "modules": {
+    "validator.py": {
+      "target_file": "src/quality_assessment/validator.py",
+      "test_file": "tests/ai_generated/test_validator.py",
+      "test_functions": 8,
+      "pytest_executions": 10,
+      "assert_statements": 5,
+      "lines_of_test_code": 84,
+      "generation_time_sec": 4.25,
+      "statements": 89,
+      "statement_coverage_pct": 79.78,
+      "branches": 72,
+      "branch_coverage_pct": 55.56,
+      "combined_coverage_pct": 68.94,
+      "manual_corrections_log": [
+        "Verified custom exception type imports match codebase."
+      ],
+      "ai_blindspots_observed": [
+        "Omitted type rejection checks (e.g. booleans passed as integers).",
+        "Missed inverted min_val > max_val validation error test in validate_numeric_bounds.",
+        "Tested only basic range boundaries without strict exclusive threshold testing."
+      ]
+    },
+    "metrics.py": {
+      "target_file": "src/quality_assessment/metrics.py",
+      "test_file": "tests/ai_generated/test_metrics.py",
+      "test_functions": 9,
+      "pytest_executions": 9,
+      "assert_statements": 14,
+      "lines_of_test_code": 65,
+      "generation_time_sec": 4.25,
+      "statements": 96,
+      "statement_coverage_pct": 73.96,
+      "branches": 66,
+      "branch_coverage_pct": 60.61,
+      "combined_coverage_pct": 68.52,
+      "manual_corrections_log": [
+        "None required for execution."
+      ],
+      "ai_blindspots_observed": [
+        "Weak positive assertions: `assert res['precision'] > 0.0` instead of testing exact mathematical rounding.",
+        "Missed unnormalized probability distribution exception in calculate_shannon_entropy.",
+        "Did not test custom zero_division_value override parameter."
+      ]
+    },
+    "risk_scorer.py": {
+      "target_file": "src/quality_assessment/risk_scorer.py",
+      "test_file": "tests/ai_generated/test_risk_scorer.py",
+      "test_functions": 5,
+      "pytest_executions": 5,
+      "assert_statements": 10,
+      "lines_of_test_code": 49,
+      "generation_time_sec": 4.25,
+      "statements": 70,
+      "statement_coverage_pct": 58.57,
+      "branches": 38,
+      "branch_coverage_pct": 28.95,
+      "combined_coverage_pct": 48.15,
+      "manual_corrections_log": [
+        "Corrected RiskTier import path."
+      ],
+      "ai_blindspots_observed": [
+        "Weak positive assertions: `assert 'tier' in res` and `assert 0 <= res['risk_score'] <= 100` without verifying individual tier boundaries (MEDIUM, HIGH, CRITICAL).",
+        "Omitted custom weights initialization validation and weights-sum-to-1.0 invariant checks.",
+        "Did not exercise multi-bracket complexity penalty S-curve transitions."
+      ]
+    },
+    "gate_tracker.py": {
+      "target_file": "src/quality_assessment/gate_tracker.py",
+      "test_file": "tests/ai_generated/test_gate_tracker.py",
+      "test_functions": 6,
+      "pytest_executions": 6,
+      "assert_statements": 6,
+      "lines_of_test_code": 44,
+      "generation_time_sec": 4.25,
+      "statements": 77,
+      "statement_coverage_pct": 84.42,
+      "branches": 22,
+      "branch_coverage_pct": 54.55,
+      "combined_coverage_pct": 77.78,
+      "manual_corrections_log": [
+        "Repaired test_reset_gate: AI assumed direct reset from PASSED to INITIALIZED was permitted; updated to transition through BLOCKED as defined by the state machine transition table."
+      ],
+      "ai_blindspots_observed": [
+        "Missed hysteresis debounce recovery requiring N consecutive passes before leaving WARNING/FAILED.",
+        "Did not test failure spike resetting debounce counter.",
+        "Omitted audit history trail inspection."
+      ]
+    },
+    "rule_engine.py": {
+      "target_file": "src/quality_assessment/rule_engine.py",
+      "test_file": "tests/ai_generated/test_rule_engine.py",
+      "test_functions": 5,
+      "pytest_executions": 5,
+      "assert_statements": 6,
+      "lines_of_test_code": 48,
+      "generation_time_sec": 4.25,
+      "statements": 87,
+      "statement_coverage_pct": 66.67,
+      "branches": 46,
+      "branch_coverage_pct": 47.83,
+      "combined_coverage_pct": 60.15,
+      "manual_corrections_log": [
+        "None required for execution."
+      ],
+      "ai_blindspots_observed": [
+        "Tested only GT and EQ comparison operators; completely omitted LT, LTE, GTE, NEQ, IN, NOT_IN.",
+        "Did not test NOT logical operator or raw dict condition parser.",
+        "Did not test lenient missing field mode (strict_missing=False)."
+      ]
+    }
+  }
+}
